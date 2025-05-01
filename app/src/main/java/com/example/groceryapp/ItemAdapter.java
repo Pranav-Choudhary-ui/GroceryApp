@@ -20,9 +20,19 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
 
     public ItemClickListener clickListener;
 
+//    public ItemAdapter(List<Item> itemList, ItemClickListener clickListener) {
+//        this.itemList = itemList;
+//        this.clickListener = clickListener;
+//    }
+
     public void setClickListener(ItemClickListener myListener){
         this.clickListener = myListener;
     }
+    public ItemAdapter(List<Item> itemArrayList) {
+        this.itemList = itemArrayList;
+    }
+
+
 
     @NonNull
     @Override
@@ -47,9 +57,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
         return itemList.size();
     }
 
-    public ItemAdapter(List<Item> itemArrayList) {
-        this.itemList = itemArrayList;
-    }
+
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView imgView;
         TextView title;

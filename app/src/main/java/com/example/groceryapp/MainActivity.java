@@ -48,11 +48,6 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-//        RecyclerView recyclerView = findViewById(R.id.recyclerView);
-//        if (recyclerView != null) {
-//            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-//            recyclerView.setLayoutManager(layoutManager);
-//        }
 
 
         itemAdapter = new ItemAdapter(itemList);
